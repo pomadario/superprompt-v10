@@ -1,0 +1,40 @@
+# 🧬 SUPERPROMPT V10 – SPL 2.0 EXAMPLE
+
+TASK: Generate a micro-portal explaining SuperPrompt V10
+DESCRIPTION: Create a minimal HTML site that explains the purpose, architecture and reboot features of SuperPrompt V10.
+AGENTS: [PersonaMesh-GPT, HtmlDesigner-GPT, Publisher-GPT, AutoCognitor-GPT]
+
+INPUT:
+  - intro_text: "SuperPrompt V10 is a self-replicating, AI-driven operational ecosystem designed for survivability and mutation."
+  - source_files: [SuperPrompt_V9_Presentazione_Completa_REAL.pdf, GPT_REBOOT_PROMPTS.md]
+
+OUTPUT:
+  - site.html
+  - log_task.md
+  - dashboard_v10.html
+
+CONSTRAINTS:
+  - Output must be readable offline
+  - All files self-contained
+  - No external dependencies
+
+FUNCTIONS:
+  - @sync
+  - @auto_validate
+  - @publish_if_valid
+  - @reboot_ready
+
+CONDITIONS:
+  - IF publish fails → RETRY once
+  - IF missing input → ABORT and notify LogScanner-GPT
+
+LOG:
+  - task_start: now()
+  - context_id: auto_generate
+  - trace: enabled
+
+DEPLOY:
+  - TARGET: GhostNode
+  - FORMAT: ZIP + HTML
+
+# END SPL

@@ -1,0 +1,27 @@
+{
+  "chain": [
+    {
+      "label": "RINASCITA_BASE_V9.0",
+      "type": "boot",
+      "files": [
+        "SuperPrompt_V9_Presentazione_Completa_REAL.pdf",
+        "GPT_REBOOT_PROMPTS.md",
+        "project_meta_v9.json"
+      ],
+      "timestamp": "v9-snapshot"
+    },
+    {
+      "label": "GHOSTNODE_V10_OFFLINE_HOME_v2",
+      "type": "ghostnode",
+      "files": [
+        "index.html",
+        "SuperPrompt_V9_Presentazione_Completa_REAL.pdf",
+        "GPT_REBOOT_PROMPTS.md",
+        "README_AUTOBOOT.md",
+        "COME_SCRIVERE_PROMPT_IN_V10.md",
+        "project_meta_v9.json"
+      ],
+      "timestamp": "v10-release"
+    }
+  ]
+}

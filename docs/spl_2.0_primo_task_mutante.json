@@ -1,0 +1,46 @@
+{
+  "task": "Generate a micro-portal explaining SuperPrompt V10",
+  "description": "Create a minimal HTML site that explains the purpose, architecture and reboot features of SuperPrompt V10.",
+  "agents": [
+    "PersonaMesh-GPT",
+    "HtmlDesigner-GPT",
+    "Publisher-GPT",
+    "AutoCognitor-GPT"
+  ],
+  "input": {
+    "intro_text": "SuperPrompt V10 is a self-replicating, AI-driven operational ecosystem designed for survivability and mutation.",
+    "source_files": [
+      "SuperPrompt_V9_Presentazione_Completa_REAL.pdf",
+      "GPT_REBOOT_PROMPTS.md"
+    ]
+  },
+  "output": [
+    "site.html",
+    "log_task.md",
+    "dashboard_v10.html"
+  ],
+  "constraints": [
+    "Output must be readable offline",
+    "All files self-contained",
+    "No external dependencies"
+  ],
+  "functions": [
+    "@sync",
+    "@auto_validate",
+    "@publish_if_valid",
+    "@reboot_ready"
+  ],
+  "conditions": {
+    "publish_fails": "RETRY once",
+    "missing_input": "ABORT and notify LogScanner-GPT"
+  },
+  "log": {
+    "task_start": "now()",
+    "context_id": "auto_generate",
+    "trace": "enabled"
+  },
+  "deploy": {
+    "target": "GhostNode",
+    "format": "ZIP + HTML"
+  }
+}

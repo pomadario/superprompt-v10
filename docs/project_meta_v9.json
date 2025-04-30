@@ -1,0 +1,25 @@
+{
+  "version": "V9.0",
+  "architecture": "AI-Orchestrated, Distributed + Rebootable",
+  "components": [
+    "MetaOrchestrator-GPT",
+    "MentalMapOrchestrator",
+    "GhostNode Offline Layer",
+    "SPL Engine v1",
+    "UserMatrix-GPT",
+    "GovernanceKernel-GPT"
+  ],
+  "recovery_files": [
+    "SuperPrompt_V9_Presentazione_Completa_REAL.pdf",
+    "GPT_REBOOT_PROMPTS.md",
+    "project_meta_v9.json"
+  ],
+  "deployment_modes": [
+    "GitHub Pages",
+    "Google Drive",
+    "Offline PWA",
+    "HTML Static Node"
+  ],
+  "reboot_prompt": "GPT_REBOOT_PROMPTS.md",
+  "ghostnode_zip": "SUPERPROMPT_V9_GHOSTNODE_DEPLOY.zip"
+}
